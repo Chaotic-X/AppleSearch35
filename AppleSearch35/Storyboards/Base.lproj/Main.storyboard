@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GIS-TE-vZm">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Apple Search-->
+        <scene sceneID="uef-Jp-C00">
+            <objects>
+                <tableViewController id="ZQ8-JE-xeG" customClass="SearchTableViewController" customModule="AppleSearch35" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2zD-Ki-Eli">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="xbackgroundone"/>
+                        <color key="separatorColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="WPu-FH-seP">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vfk-yX-hXI">
+                                    <rect key="frame" x="8" y="8" width="398" height="94"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DBR-rK-8cy">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="54"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="barTintColor" name="searchbarcolor"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </searchBar>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cr0-Kg-tpA">
+                                            <rect key="frame" x="0.0" y="59" width="398" height="36"/>
+                                            <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="sss-jf-RWn"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="Music"/>
+                                                <segment title="Applications"/>
+                                            </segments>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="selectedSegmentTintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="Cr0-Kg-tpA" firstAttribute="centerX" secondItem="vfk-yX-hXI" secondAttribute="centerX" id="TkX-8R-kAM"/>
+                                        <constraint firstItem="Cr0-Kg-tpA" firstAttribute="centerX" secondItem="DBR-rK-8cy" secondAttribute="centerX" id="vuk-jc-iv1"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="xbackgroundone"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="vfk-yX-hXI" secondAttribute="bottom" constant="8" id="JgD-pI-0Lt"/>
+                                <constraint firstItem="vfk-yX-hXI" firstAttribute="top" secondItem="WPu-FH-seP" secondAttribute="top" constant="8" id="SVc-DQ-CCJ"/>
+                                <constraint firstItem="vfk-yX-hXI" firstAttribute="leading" secondItem="WPu-FH-seP" secondAttribute="leading" constant="8" id="pJD-nb-yVV"/>
+                                <constraint firstAttribute="trailing" secondItem="vfk-yX-hXI" secondAttribute="trailing" constant="8" id="tBw-DA-cYE"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="itemCell" id="M5M-FV-Oxy" customClass="ItemTableViewCell" customModule="AppleSearch35" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="138" width="414" height="136.33332824707031"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M5M-FV-Oxy" id="E10-Wc-e0s">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="136.33332824707031"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hwS-gI-wWY">
+                                            <rect key="frame" x="16" y="7.9999999999999929" width="388" height="120.33333333333331"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="obY-Zx-KNT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="249.66666666666666" height="120.33333333333333"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9s-s6-StB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="249.66666666666666" height="56.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-Gr-LYt">
+                                                            <rect key="frame" x="0.0" y="64.333333333333329" width="249.66666666666666" height="56"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-xC-h8f">
+                                                    <rect key="frame" x="267.66666666666669" y="0.0" width="120.33333333333331" height="120.33333333333333"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="1hk-kh-bnP"/>
+                                                        <constraint firstAttribute="width" secondItem="ddJ-xC-h8f" secondAttribute="height" multiplier="1:1" id="VIt-vn-aiG"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToMask" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hwS-gI-wWY" firstAttribute="leading" secondItem="E10-Wc-e0s" secondAttribute="leading" constant="16" id="Ff6-VP-gu1"/>
+                                        <constraint firstAttribute="bottom" secondItem="hwS-gI-wWY" secondAttribute="bottom" constant="8" id="HjB-z0-dxC"/>
+                                        <constraint firstItem="hwS-gI-wWY" firstAttribute="top" secondItem="E10-Wc-e0s" secondAttribute="top" constant="8" id="KkR-nz-aOG"/>
+                                        <constraint firstAttribute="trailing" secondItem="hwS-gI-wWY" secondAttribute="trailing" constant="10" id="zaC-B5-LPJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="xbackgroundone"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="artWorkImageView" destination="ddJ-xC-h8f" id="dbn-ib-bvi"/>
+                                    <outlet property="artistOrDesctiptionLabel" destination="D0s-Gr-LYt" id="g6e-qm-NPi"/>
+                                    <outlet property="titleLabel" destination="Y9s-s6-StB" id="elO-ec-BXJ"/>
+                                    <segue destination="UgO-hT-9ZK" kind="show" identifier="toDetailVC" id="b9P-7z-Kem"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZQ8-JE-xeG" id="jfO-av-oXy"/>
+                            <outlet property="delegate" destination="ZQ8-JE-xeG" id="bor-iF-fZq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Apple Search" id="gYE-As-Jpc"/>
+                    <connections>
+                        <outlet property="appleSearchBar" destination="DBR-rK-8cy" id="mHe-NC-ZC5"/>
+                        <outlet property="appleSegmentedController" destination="Cr0-Kg-tpA" id="qcl-ZT-ibS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oy7-PY-cJs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343.47826086956525" y="-29.347826086956523"/>
+        </scene>
+        <!--Search Detail View Controller-->
+        <scene sceneID="9aI-up-XJ9">
+            <objects>
+                <viewController id="UgO-hT-9ZK" customClass="SearchDetailViewController" customModule="AppleSearch35" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MwJ-lV-Sj5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="xbackgroundone"/>
+                        <viewLayoutGuide key="safeArea" id="zYw-Bj-aip"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5eT-yC-bbe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7X-gz-rE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="-29"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ka8-Y2-JAr">
+            <objects>
+                <navigationController id="GIS-TE-vZm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YCk-wp-e18">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="xbackgroundtwo"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="xbackgroundtwo"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZQ8-JE-xeG" kind="relationship" relationship="rootViewController" id="1hU-OB-YfF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sq-Zy-rl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-573" y="-29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="noimage" width="72" height="81.666664123535156"/>
+        <namedColor name="searchbarcolor">
+            <color red="0.0" green="0.70498663187026978" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="xbackgroundone">
+            <color red="0.0" green="0.32729986310005188" blue="0.60558962821960449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="xbackgroundtwo">
+            <color red="0.0" green="0.40001270174980164" blue="0.54012703895568848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
